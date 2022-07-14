@@ -76,6 +76,7 @@ def perform
   puts "Voici la liste des adresses mails de la mairie de chaque commune du département du Val-d'Oise: "
   a = Hash[all_commune_name.zip all_email_commune_text]
   print a
+  return a
 end 
 
 perform

@@ -2,8 +2,16 @@
 
 require_relative '../lib/01_mairie_christmas'
 
-describe "get_townhall_name" do
-  it "return an array of all city name" do
-    expect(get_townhall_name(scrap_all_link_commune)).not_to be_nil
+describe "Mairie Christmas !" do
+
+  it "return an hash of all townhall with their mail" do
+    expect(perform).to be_an(Hash)
   end
+
+  it "return the name of townhall" do  
+    expect(perform).to include ("ableiges")
+    expect(perform).to include ("avernes")
+    expect(perform).to include ("wy-dit-joli-village")
+  end 
+
 end
